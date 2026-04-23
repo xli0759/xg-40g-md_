@@ -33,7 +33,7 @@ rm -rf feeds/luci/applications/luci-app-daed
 
 # 8. 获取 QiuSimons 的 luci-app-daed 源码
 # 官方 README 明确指定克隆到 package/dae，保持原样
-git clone https://github.com/QiuSimons/luci-app-daed package/dae
+git clone https://github.com/xli0759/luci-app-daed package/dae
 
 # 9. 修改内核参数以满足 DAE 的要求
 
