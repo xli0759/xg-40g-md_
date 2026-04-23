@@ -60,9 +60,6 @@ CONFIG_KERNEL_XDP_SOCKETS=y
 CONFIG_PACKAGE_kmod-xdp-sockets-diag=y
 # 编译 daed 核心、vmlinux-btf 外部 BTF 包与 LuCI 控制面板
 CONFIG_PACKAGE_vmlinux-btf=y
-CONFIG_PACKAGE_daed=y
-CONFIG_PACKAGE_luci-app-daed=y
-CONFIG_PACKAGE_luci-i18n-daed-zh-cn=y
 EOF
 
 echo "精简与 daed 配置完成！"
