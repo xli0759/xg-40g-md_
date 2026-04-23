@@ -101,6 +101,13 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
+    - name: Build Tools & Toolchain
+      run: |
+        cd openwrt
+        # 必须先执行这两行，否则后面所有 compile 命令都会报 "No such file"
+        make tools/install -j$(nproc)
+        make toolchain/install -j$(nproc)
+
       # 新增：预编译 luci-base
     - name: Pre-compile luci-base
       run: |
