@@ -89,6 +89,13 @@ jobs:
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
+      # 新增：预编译 luci-base
+    - name: Pre-compile luci-base
+      run: |
+        cd openwrt
+        echo "正在预编译 luci-base..."
+        make package/feeds/luci/luci-base/compile -j1 V=99
+
     - name: Compile the firmware
       id: compile
       run: |
