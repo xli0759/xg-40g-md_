@@ -34,7 +34,6 @@ rm -rf feeds/luci/applications/luci-app-daed
 # 8. 获取 QiuSimons 的 luci-app-daed 源码
 # 官方 README 明确指定克隆到 package/dae，保持原样
 git clone https://github.com/QiuSimons/luci-app-daed package/dae
-git clone https://github.com/QiuSimons/vmlinux-btf package/vmlinux-btf
 
 # 9. 修改内核参数以满足 DAE 的要求
 
@@ -59,7 +58,6 @@ CONFIG_BPF_TOOLCHAIN_HOST=y
 CONFIG_KERNEL_XDP_SOCKETS=y
 CONFIG_PACKAGE_kmod-xdp-sockets-diag=y
 # 编译 daed 核心、vmlinux-btf 外部 BTF 包与 LuCI 控制面板
-CONFIG_PACKAGE_vmlinux-btf=y
 EOF
 
 echo "精简与 daed 配置完成！"
